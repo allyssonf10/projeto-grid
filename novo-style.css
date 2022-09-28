@@ -1,0 +1,192 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+.conteiner-body{
+    background: hsl(0, 0%, 81%);
+    min-height: 100vh;
+    display: grid;
+}
+
+
+.conteiner{
+    width: 1200px;
+    height: 600px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        'daniel daniel jonatha kira'
+        'daniel daniel jonatha kira'
+        'jeanet patrick patrick kira'
+        'jeanet patrick patrick kira';
+    gap: 30px; 
+    
+}
+
+.conteudo{
+    
+    display: grid;
+    color: hsl(217, 19%, 35%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    padding: 30px;
+    
+}
+
+h2{
+    font-size: 13px;
+    font-weight: 300;
+    margin: 1% 0% 0% 0%;
+}
+
+.branco{
+    color: white;
+}
+
+h1{
+    font-size: 16px;
+}
+
+.texto{
+    font-weight: 300;
+    color: rgb(165, 165, 165);
+    font-size: 13px;
+}
+
+.texto-2{
+    font-weight: 200;
+    color: rgb(165, 165, 165);
+    font-size: 11px;
+    margin: -3% 0 0 0;
+}
+
+.melhoria{
+    margin: -14% 0 0 0;
+}
+
+.melhoria-2{
+    margin: -9% 0 0 0
+}
+
+.info{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    
+}
+
+
+.daniel{
+    
+    background: hsl(263, 55%, 52%);
+    grid-area: daniel;
+    
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+.jonatha{
+    background: hsl(217, 19%, 35%);
+    grid-area: jonatha;
+    
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.jeanet{
+    background: hsl(0, 0%, 100%);
+    grid-area: jeanet;
+    
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.patrick{
+    background: hsl(219, 29%, 14%);
+    grid-area: patrick;
+    grid-column-end: span 2;
+    
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.kira{
+    background: hsl(0, 0%, 100%);
+    grid-area: kira;
+    
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.foto{
+    width: 60%;
+    grid-row: span 2;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.foto-2{
+    width: 60%;
+    grid-row: span 2;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid hsl(263, 81%, 68%);
+}
+
+@media screen and (max-width:768px) {
+    .conteiner-body{
+        display: grid;
+    }
+
+    .conteiner{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 20% 20% 20% ;
+        grid-template-areas: 
+        'daniel'
+        'jonatha'
+        'jeanet'
+        'patrick'
+        'kira';
+        width: 85%;
+        height: 97%;
+        padding: 1% 4% 0% 8%;
+    }
+
+    .info{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .jonatha{
+       height: 70%;
+    }
+
+    .jeanet{
+        height: 70%;
+    }
+
+    .foto-2{
+        width: 52%;
+    }
+
+    .melhoria{
+        margin: -14% 0 0 0;
+    }
+
+    .melhoria-2{
+        margin: -21% 0 0 0
+    }
+
+    .melhoria-3{
+        margin: -5% 0 0 0
+    }
+    
+}
