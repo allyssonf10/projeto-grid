@@ -63,7 +63,7 @@ h1{
     font-weight: 200;
     color: rgb(165, 165, 165);
     font-size: 11px;
-    margin: -3% 0 0 0;
+   
 }
 
 .melhoria{
@@ -75,15 +75,18 @@ h1{
 }
 
 .info{
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
     
 }
 
 
 .daniel{
-    
     background: hsl(263, 55%, 52%);
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 87% 01%;
     grid-area: daniel;
     
     box-sizing: border-box;
@@ -124,19 +127,16 @@ h1{
     border-radius: 10px;
 }
 
-.foto{
-    width: 60%;
-    grid-row: span 2;
-    box-sizing: border-box;
+.info img{
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #fff;
 }
 
-.foto-2{
-    width: 60%;
-    grid-row: span 2;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 2px solid hsl(263, 81%, 68%);
+.nome{
+
 }
 
 @media screen and (max-width:768px) {
