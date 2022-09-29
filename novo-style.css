@@ -15,23 +15,20 @@
 
 .conteiner{
     width: 1200px;
-    height: 600px;
     display: grid;
     margin: auto;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-        'daniel daniel jonatha kira'
-        'daniel daniel jonatha kira'
-        'jeanet patrick patrick kira'
-        'jeanet patrick patrick kira';
+    grid-template-rows: repeat(2, min-content);
+    
     gap: 30px; 
     
 }
 
 .conteudo{
     
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
     color: hsl(217, 19%, 35%);
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
@@ -51,12 +48,13 @@ h2{
 
 h1{
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .texto{
     font-weight: 300;
     color: rgb(165, 165, 165);
-    font-size: 13px;
+    line-height: 1.2;
 }
 
 .texto-2{
@@ -66,13 +64,6 @@ h1{
    
 }
 
-.melhoria{
-    margin: -14% 0 0 0;
-}
-
-.melhoria-2{
-    margin: -9% 0 0 0
-}
 
 .info{
     display: flex;
@@ -87,7 +78,7 @@ h1{
     background-image: url('./images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
     background-position: 87% 01%;
-    grid-area: daniel;
+    grid-column: 1/3;
     
     box-sizing: border-box;
     border-radius: 10px;
@@ -96,7 +87,7 @@ h1{
 
 .jonatha{
     background: hsl(217, 19%, 35%);
-    grid-area: jonatha;
+    grid-column: 3/4;
     
     box-sizing: border-box;
     border-radius: 10px;
@@ -104,7 +95,8 @@ h1{
 
 .jeanet{
     background: hsl(0, 0%, 100%);
-    grid-area: jeanet;
+    grid-row: 2/3;
+    grid-column: 1/2;
     
     box-sizing: border-box;
     border-radius: 10px;
@@ -112,16 +104,16 @@ h1{
 
 .patrick{
     background: hsl(219, 29%, 14%);
-    grid-area: patrick;
-    grid-column-end: span 2;
-    
+    grid-row: 2/3;
+  grid-column: 2/4;
     box-sizing: border-box;
     border-radius: 10px;
 }
 
 .kira{
     background: hsl(0, 0%, 100%);
-    grid-area: kira;
+    grid-row: -1/1;
+    grid-column: 4/5;
     
     box-sizing: border-box;
     border-radius: 10px;
@@ -135,9 +127,35 @@ h1{
     border: 2px solid #fff;
 }
 
-.nome{
+@media screen and (max-width: 1024px) {
+    body{
+        padding: 20px;
+      }
+    
+    .conteiner  {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 95%;
+        grid-gap: 15px;
+      }
+      .daniel{
+        grid-column: 1/3;
+      }
+      .jonatha{
+        grid-column: 3/4;
+      }
 
+      .jeanet{
+        grid-column: 1/1;
+      }
+
+      .kira{
+        grid-column: 1/4;
+        grid-row: 3/4;
+      }
 }
+    
+
 
 @media screen and (max-width:768px) {
     .conteiner-body{
@@ -160,7 +178,7 @@ h1{
     }
 
     .info{
-        text-align: center;
+        
         align-items: center;
         justify-content: center;
     }
