@@ -158,53 +158,13 @@ h1{
 
 
 @media screen and (max-width:768px) {
-    .conteiner-body{
-        display: grid;
-    }
-
     .conteiner{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 20% 20% 20% 20% 20% ;
-        grid-template-areas: 
-        'daniel'
-        'jonatha'
-        'jeanet'
-        'patrick'
-        'kira';
-        width: 85%;
-        height: 97%;
-        padding: 1% 4% 0% 8%;
+        margin-top: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+      }
+      .conteudo{
+        grid-column: unset !important;
+        grid-row: unset !important;
+      }
     }
-
-    .info{
-        
-        align-items: center;
-        justify-content: center;
-    }
-
-    .jonatha{
-       height: 70%;
-    }
-
-    .jeanet{
-        height: 70%;
-    }
-
-    .foto-2{
-        width: 52%;
-    }
-
-    .melhoria{
-        margin: -14% 0 0 0;
-    }
-
-    .melhoria-2{
-        margin: -21% 0 0 0
-    }
-
-    .melhoria-3{
-        margin: -5% 0 0 0
-    }
-    
-}
