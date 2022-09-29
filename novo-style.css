@@ -6,6 +6,10 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
+body{
+    background: hsl(0, 0%, 81%);
+}
+
 .conteiner-body{
     background: hsl(0, 0%, 81%);
     min-height: 100vh;
